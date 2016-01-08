@@ -1,0 +1,104 @@
+/*The purpose of this program is to sort crabs by size
+ * and to produce the average of the crabs that are input. 
+ * 
+ * Casey Smith
+ *
+ * Date: 9/14/14
+ */
+
+import java.util.Scanner;
+
+public class CrabSize {
+
+	public static void main (String[] args)
+	{
+		Scanner kbd=new Scanner(System.in);
+		
+		double crabSize;
+		double sumOfIllegal=0; 		//The sum of all illegal sized crabs
+		double sumOfSmall=0; 		//The sum of all small sized crabs
+		double sumOfMedium=0; 		//The sum of all medium sized crabs
+		double sumOfLarge=0; 		//The sum of all large sized crabs
+		double sumOfCrabs=0;		//The sum of all crabs
+		double totalCrab=0; 		//The sum of all crab sizes
+		double totalLegal=0;		//The sum of all legal crab sizes
+		double sumOfLegalCrabs=0;	//The sum of all legal crabs
+		double avgAll;				//The average size of all crabs
+		double avgLegal;			//The average size of all legal crabs 
+		int counter=0;
+		int legalCounter=0;
+		
+				System.out.println("Please input a crab size. Enter a negative number to exit.");
+				crabSize=kbd.nextDouble();	
+	
+		
+				while (crabSize>=0)
+				{
+				
+					counter=counter+1;			
+					sumOfCrabs=counter;				//accounts for the number of crabs
+					totalCrab=totalCrab+crabSize;	//accounts for sum of crab sizes
+					
+					if(crabSize<5)
+					{
+						sumOfIllegal++;
+					}
+					
+					else if (crabSize<5.5)
+						{
+						totalLegal=totalLegal+crabSize;		//adds the crab size to enable legal crab
+						legalCounter=legalCounter+1;		//size average calculations. 
+						sumOfLegalCrabs=legalCounter;
+						sumOfSmall++;
+						}
+						
+					else if (crabSize<6)
+							{
+						totalLegal=totalLegal+crabSize;		//adds the crab size to enable legal crab
+						legalCounter=legalCounter+1;		//size average calculations.
+						sumOfLegalCrabs=legalCounter;
+								sumOfMedium++;		
+							}
+						
+					else if (crabSize>=6)
+								{
+						totalLegal=totalLegal+crabSize;		//adds the crab size to enable legal crab
+						legalCounter=legalCounter+1;		//size average calculations. 
+						sumOfLegalCrabs=legalCounter;
+									sumOfLarge++;
+								}		
+					
+					
+				System.out.println("\nPlease input a crab size, enter a negative number to exit.");
+				crabSize=kbd.nextDouble();
+				}
+
+				
+			if (sumOfCrabs>=2)
+			{
+			System.out.printf("\nThere were %.0f crabs processed.", sumOfCrabs);
+			}
+			
+			else
+			{
+				System.out.printf("\nThere was %.0f crab processed.", sumOfCrabs);
+			}
+			
+			//If else statement above enables proper grammar output dependent upon user's input 
+				
+			
+				System.out.printf("\n\nThe number of illegal crabs = %.0f.", sumOfIllegal);
+				System.out.printf("\nThe number of small crabs = %.0f.", sumOfSmall);
+				System.out.printf("\nThe number of medium crabs = %.0f.", sumOfMedium);
+				System.out.printf("\nThe number of large crabs = %.0f.", sumOfLarge);
+				
+				avgAll=totalCrab/sumOfCrabs;
+				System.out.printf("\n\nThe average size of all crabs = %.2f inches.", avgAll);
+
+				avgLegal=totalLegal/sumOfLegalCrabs;
+				System.out.printf("\nThe average size of all legal crabs = %.2f inches.", avgLegal);
+						
+			kbd.close();
+				
+				}
+	}
