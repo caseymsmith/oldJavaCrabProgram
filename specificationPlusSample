@@ -1,0 +1,98 @@
+Casey Smith
+
+Description:
+Produce a list of the quantity of 4 different crab sizes. 
+The program will interactively read the size of individual crabs until a negative number is entered. 
+Crabs 5.0 up to 5.5 (but not including 5.5 inches are small, 5.5 up to 6.0 (but not including 6.0) are medium and crabs 6.0 and over are
+large. Any crab less than 5 inches must be thrown back as non-legal. The output will consist of the total number of crabs and the 
+quantity in each of the four categories: illegal, small, medium, large. It will also display the average size of all crabs caught 
+and the average size of only the legal crabs caught. You must check for 0 total crabs caught and 0 total legal crabs caught. 
+
+Clarification
+The input of this program is interactive (received from the keyboard by the person running the program). 
+A negative weight will be the sentinel data. Floating point output must be rounded to 2 places to the right of the decimal point. 
+
+
+Sample Input
+5.7
+5.2
+6.0
+3.5
+5.4
+5.5
+5.9
+7.2
+4.8
+5.0
+-1
+Sample Output
+There were 10 crabs processed.
+The number of illegal crabs = 2. 
+The number of small crabs = 3.
+The number of medium crabs = 3.
+The number of large crabs = 2. 
+The average size of all crabs = 5.42 inches. 
+The average size of legal crabs = 5.74 inches. 
+
+Personal Input 1
+5.2
+8.0
+2.1
+6.3
+7.1
+5.5
+2.3
+7.4
+7.9
+5.7
+5.1
+5.9
+4.7
+6.2
+5.8
+-1
+Personal Output 1
+There were 15 crabs processed.
+The number of illegal crabs = 3. 
+The number of small crabs = 2.
+The number of medium crabs = 4.
+The number of large crabs = 6. 
+The average size of all crabs = 5.68 inches. 
+The average size of legal crabs = 6.34 inches. 
+Personal Input 2
+4.4
+3.5
+6.2
+5.6
+5.1
+4.1
+5.9
+7.0
+-1
+Personal Output 2
+There were 8 crabs processed.
+The number of illegal crabs = 3. 
+The number of small crabs = 1.
+The number of medium crabs = 2.
+The number of large crabs = 2. 
+The average size of all crabs = 5.23 inches. 
+The average size of legal crabs = 5.96 inches. 
+
+Variables and Constants
+Input Variables
+•	Sizes of the crabs
+Output Variables
+•	Number of crabs processed
+•	Number of illegal crabs
+•	Number of small crabs
+•	Number of medium crabs
+•	Number of large crabs
+•	Average size of all crabs
+•	Average size of legal crabs
+Other Variables
+•	Sizing
+Illegal: Below 5.0
+Small: 5.0-5.5 (but not including 5.5)
+Medium: 5.5-6.0 (but not including 6.0)
+Large: 6.0 and above
+
